@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+   
+   
+    <title>Word counter</title>
+</head>
+
+<body>
+
+    <div style="text-align:center">
+
+        <h1>THIS could counter words for you</h1>
+
+    </div>
+    <div style="text-align:right">
+        <a href="{% url 'about' %}"><i>ABOUT Us</i></a>
+    </div>
+    <br>
+    <br>
+    <div style="text-align:center">
+        <form action="{% url 'count' %}">
+            <textarea class="form-control" rows="3" name="fulltext"></textarea></textarea>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
